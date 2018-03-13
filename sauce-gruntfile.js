@@ -12,11 +12,11 @@ module.exports = function(grunt, version) {
 // * -1: Latest - 1 version
 // ** Number: A hardcoded version number
 var supportedBrowsers = {
-  'ie11': {
-    browserName: 'internet explorer',
-    platform: 'Windows 8.1',
-    version: '11.0'
-  },
+  // 'ie11': {
+  //   browserName: 'internet explorer',
+  //   platform: 'Windows 8.1',
+  //   version: '11.0'
+  // },
   'edge-1': {
     browserName: 'MicrosoftEdge',
      'platform': 'Windows 10',
@@ -26,43 +26,43 @@ var supportedBrowsers = {
      browserName: 'MicrosoftEdge',
      'platform': 'Windows 10',
      version: 'latest'
-  },
-  'safari-1': {
-    browserName: 'safari',
-    version: '10.0'
-  },
-  'safari-0': {
-    browserName: 'safari',
-    version: 'latest'
-  },
- 'ios-1': {
-    browserName: 'iphone',
-    version: '10.0'
-  },
-  'ios-0': {
-    browserName: 'iphone',
-    version: 'latest',
-  },
-  'chrome-1': {
-    browserName: 'chrome',
-    platform: 'OSX 10.9',
-    version: 'latest-1'
-  },
-  'chrome-0': {
-    browserName: 'chrome',
-    platform: 'WIN8',
-    version: 'latest'
-  },
-  'firefox-1': {
-    browserName: 'firefox',
-    version: 'latest-1',
-    platform: 'WIN8'
-  },
-  'firefox-0': {
-    browserName: 'firefox',
-    version: 'latest',
-    'platform': 'Windows 10'
   }
+ //  'safari-1': {
+ //    browserName: 'safari',
+ //    version: '10.0'
+ //  },
+ //  'safari-0': {
+ //    browserName: 'safari',
+ //    version: 'latest'
+ //  },
+ // 'ios-1': {
+ //    browserName: 'iphone',
+ //    version: '10.0'
+ //  },
+ //  'ios-0': {
+ //    browserName: 'iphone',
+ //    version: 'latest',
+ //  },
+ //  'chrome-1': {
+ //    browserName: 'chrome',
+ //    platform: 'OSX 10.9',
+ //    version: 'latest-1'
+ //  },
+ //  'chrome-0': {
+ //    browserName: 'chrome',
+ //    platform: 'WIN8',
+ //    version: 'latest'
+ //  },
+ //  'firefox-1': {
+ //    browserName: 'firefox',
+ //    version: 'latest-1',
+ //    platform: 'WIN8'
+ //  },
+  // 'firefox-0': {
+  //   browserName: 'firefox',
+  //   version: 'latest',
+  //   'platform': 'Windows 10'
+  // }
 };
 
 
@@ -97,15 +97,15 @@ var unsupportedBrowsers = {
     "http://localhost:9999/test/core_tests.html?stop=true"
   ];
   var quickTestBrowsers = [
-    supportedBrowsers['safari-1'],
-    supportedBrowsers['safari-0'],
+    // supportedBrowsers['safari-1'],
+    // supportedBrowsers['safari-0'],
     supportedBrowsers['edge-0'],
-    supportedBrowsers['edge-1'],
-    supportedBrowsers['ie11'],
-    supportedBrowsers['chrome-1'],
-    supportedBrowsers['chrome-0'],
+    supportedBrowsers['edge-1']
+    // supportedBrowsers['ie11'],
+    // supportedBrowsers['chrome-1'],
+    // supportedBrowsers['chrome-0'],
     //supportedBrowsers['firefox-1'], enable once firefox-1 becomes Firefox 58; 57 has problems
-    supportedBrowsers['firefox-0']
+    // supportedBrowsers['firefox-0']
   ];
 
   var smallTestUrls = grunt.file.expand("test/smalltest*.html").map(file => "http://localhost:9999/" + file + "?stop=true");
